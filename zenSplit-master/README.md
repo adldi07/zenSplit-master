@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# zenSplit - Group Expense Tracker
+
+zenSplit is a web application to keep track of individual and group expenses, making it easy to split bills and settle up among friends or groups. Built with Next.js, React, MongoDB, and Tailwind CSS.
+
+## Features
+
+- Add, view, and delete expenses for a group
+- Add and remove friends from the group
+- Automatic calculation of each member's balance (who owes whom and how much)
+- Settlement suggestions to simplify payments
+- Responsive and modern UI
+- Persistent storage using MongoDB
+
+## Tech Stack
+
+- **Frontend:** Next.js (App Router), React, Tailwind CSS, React Icons
+- **Backend:** Next.js API routes
+- **Database:** MongoDB
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v16 or higher recommended)
+- npm or yarn
+- MongoDB database (local or cloud, e.g., MongoDB Atlas)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/zenSplit.git
+   cd zenSplit/zenSplit-master
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-## Learn More
+3. **Configure environment variables:**
+   - Create a `.env.local` file in the root directory.
+   - Add your MongoDB connection string:
+     ```
+     MONGODB_URI=your_mongodb_connection_string
+     MONGODB_DB=your_database_name
+     ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the development server:**
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+- **Add Friends:** Use the form to add group members.
+- **Add Expenses:** Click "Add Expense", fill in the details, and select who paid and who participated.
+- **View Balances:** See how much each person owes or gets back.
+- **Settle Up:** View suggested settlements to clear all debts.
+- **Remove Friends:** Remove a friend and all their related expenses.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/` - Main application pages and layout
+- `src/app/api/` - API routes for expenses and friends
+- `src/lib/mongodb.js` - MongoDB connection helper
+- `tailwind.config.js` - Tailwind CSS configuration
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Push to your fork and open a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please open an issue in the repository.
